@@ -97,6 +97,24 @@ h1 {
   font-weight: 500;
 }
 
+h2 {
+  font-size: 2.25rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+  opacity: 0.56;
+  line-height: 1.5;
+  font-family: "Inter", sans-serif;
+}
+
+h6 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+}
+
 a {
   font-family: "Inter", sans-serif;
   color: #282A3A;
@@ -110,7 +128,7 @@ a:hover {
 
 @media (max-width: 767px) {
   body {
-    font-size: 16px;
+    font-size: 1rem;
   }
   h1 {
     font-size: 2.625rem;
@@ -233,7 +251,7 @@ header.header .right .menu-bar a {
 }
 
 .counters-section {
-  padding: 40px 0 80px;
+  padding: 40px 0;
 }
 .counters-section .inner {
   padding: 80px 0;
@@ -272,6 +290,85 @@ header.header .right .menu-bar a {
   margin-top: 16px;
 }
 
+.products-section {
+  padding: 40px 0;
+}
+.products-section .inner .title-part {
+  max-width: 450px;
+  margin: 0 auto;
+  text-align: center;
+}
+.products-section .inner .title-part h5 {
+  margin: 0;
+}
+.products-section .cards-wrapper {
+  margin: 80px -12px 0;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 24px;
+}
+.products-section .cards-wrapper .card {
+  width: 25%;
+  padding: 0 12px;
+}
+.products-section .cards-wrapper .card .image {
+  border-radius: 0 40px 0 40px;
+  overflow: hidden;
+}
+.products-section .cards-wrapper .card .content-box {
+  padding: 16px 24px;
+}
+.products-section .cards-wrapper .card .content-box .raitng {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.products-section .cards-wrapper .card .content-box .raitng .stars {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  opacity: 0.7;
+}
+.products-section .cards-wrapper .card .content-box .raitng span.all {
+  font-size: 16px;
+  opacity: 0.7;
+  line-height: 1;
+}
+.products-section .cards-wrapper .card .content-box .content {
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 1.3;
+  opacity: 0.7;
+}
+.products-section .cards-wrapper .card .content-box .card-bottom {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.products-section .cards-wrapper .card .content-box .card-bottom .price {
+  font-weight: 700;
+  opacity: 0.7;
+}
+.products-section .cards-wrapper .card .content-box .card-bottom a {
+  background: #6D1600;
+  min-width: 80px;
+  text-align: center;
+  padding: 4px;
+  border-radius: 8px;
+  font-size: 30px;
+  line-height: 0.5;
+  color: #fff;
+  border: 1px solid #6D1600;
+  transition: all 0.3s ease;
+  height: 30px;
+}
+.products-section .cards-wrapper .card .content-box .card-bottom a:hover {
+  background-color: #fff;
+  color: #6D1600;
+}
+
 @media (max-width: 1199px) {
   .counters-section .inner {
     padding: 40px 0;
@@ -280,13 +377,22 @@ header.header .right .menu-bar a {
     right: -1vw;
   }
   .counters-section .inner .counter-item .content {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .counters-section .inner .counter-item .count {
-    font-size: 52px;
+    font-size: 3.25rem;
+  }
+  .products-section .cards-wrapper .card {
+    width: 50%;
+  }
+  .products-section .cards-wrapper .card .image img {
+    width: 100%;
   }
 }
 @media (max-width: 991px) {
+  .counters-section {
+    padding: 40px 0;
+  }
   .counters-section .inner {
     row-gap: 60px;
   }
@@ -295,6 +401,12 @@ header.header .right .menu-bar a {
   }
   .counters-section .inner .counter-item:nth-child(2)::before {
     display: none;
+  }
+  .products-section {
+    padding: 40px 0;
+  }
+  .products-section .cards-wrapper {
+    margin-top: 40px;
   }
 }
 @media (max-width: 767px) {
@@ -311,10 +423,19 @@ header.header .right .menu-bar a {
     right: -5vw;
   }
   .counters-section .inner .counter-item .count {
-    font-size: 42px;
+    font-size: 2.625rem;
   }
   .counters-section .inner .counter-item .content {
-    font-size: 18px;
+    font-size: 1.125rem;
+  }
+  .products-section .cards-wrapper {
+    margin: 40px 0 0;
+  }
+  .products-section .cards-wrapper .card {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 0;
   }
 }
 @media (max-width: 375px) {
