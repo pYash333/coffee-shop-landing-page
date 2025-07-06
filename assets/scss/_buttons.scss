@@ -1,0 +1,39 @@
+.primary-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  a {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    background: $primary-color;
+    padding: 24px 40px;
+    border-radius: 0 23px;
+    color: #fff;
+    font-family: $tertiary-font;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    span {
+      transition: transform 0.3s ease;
+    }
+    &:hover {
+      span {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .primary-btn {
+    a {
+      font-size: 1.125rem;
+      padding: 18px 30px;
+
+      span {
+        display: inline-flex;
+        width: 26px;
+      }
+    }
+  }
+}
