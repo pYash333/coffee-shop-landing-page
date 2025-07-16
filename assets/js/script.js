@@ -7,4 +7,22 @@ $(function () {
     delay: 20,
     time: 2000,
   });
+
+  if ($(".testimonial-section").length) {
+    new Splide(".testimonial-section .cards-wrapper", {
+      type: "loop",
+      perPage: 3,
+      autoplay: true,
+      arrows: false,
+      pagination: true,
+      breakpoints: {
+        991: {
+          perPage: 2,
+        },
+        767: {
+          perPage: 1,
+        },
+      },
+    }).mount();
+  }
 });
