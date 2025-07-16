@@ -291,7 +291,7 @@ header.header .right .menu-bar a {
 }
 
 .products-section {
-  padding: 40px 0;
+  padding: 40px 0 80px;
 }
 .products-section .inner .title-part {
   max-width: 450px;
@@ -369,6 +369,47 @@ header.header .right .menu-bar a {
   color: #6D1600;
 }
 
+.about-section {
+  padding: 80px 0 144px;
+}
+.about-section .title-part {
+  max-width: 330px;
+  margin: 0 auto;
+}
+.about-section .inner-wrapper {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+.about-section .left,
+.about-section .right {
+  width: 50%;
+}
+.about-section .left .primary-btn {
+  justify-content: flex-start;
+}
+.about-section .right {
+  display: flex;
+  gap: 24px;
+}
+.about-section .right .image {
+  border-radius: 120px 0 120px 0;
+  display: flex;
+  overflow: hidden;
+  max-height: 378px;
+}
+.about-section .right .image img {
+  width: 100%;
+  display: block;
+}
+.about-section .right .image:nth-child(2) {
+  border-radius: 0 120px 0 120px;
+}
+.about-section .right .image:first-child {
+  transform: translateY(64px);
+}
+
 @media (max-width: 1199px) {
   .counters-section .inner {
     padding: 40px 0;
@@ -387,6 +428,18 @@ header.header .right .menu-bar a {
   }
   .products-section .cards-wrapper .card .image img {
     width: 100%;
+  }
+  .about-section {
+    padding: 80px 0;
+  }
+  .about-section .inner-wrapper {
+    gap: 42px;
+  }
+  .about-section .left {
+    width: 48%;
+  }
+  .about-section .right {
+    width: 52%;
   }
 }
 @media (max-width: 991px) {
@@ -407,6 +460,30 @@ header.header .right .menu-bar a {
   }
   .products-section .cards-wrapper {
     margin-top: 40px;
+  }
+  .about-section {
+    padding: 40px 0;
+  }
+  .about-section .inner-wrapper {
+    gap: 42px;
+    flex-direction: column-reverse;
+    margin-top: 40px;
+  }
+  .about-section .left {
+    width: 100%;
+  }
+  .about-section .left .primary-btn {
+    justify-content: center;
+  }
+  .about-section .left .content {
+    text-align: center;
+  }
+  .about-section .right {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .about-section .right .image:first-child {
+    transform: translate(0);
   }
 }
 @media (max-width: 767px) {
@@ -436,6 +513,17 @@ header.header .right .menu-bar a {
     max-width: 420px;
     margin: 0 auto;
     padding: 0;
+  }
+}
+@media (max-width: 575px) {
+  .about-section .right {
+    width: 100%;
+  }
+  .about-section .right .image {
+    border-radius: 60px 0 60px 0;
+  }
+  .about-section .right .image:nth-child(2) {
+    border-radius: 0 60px 0 60px;
   }
 }
 @media (max-width: 375px) {

@@ -69,7 +69,7 @@
 }
 
 .products-section {
-  padding: 40px 0;
+  padding: 40px 0 80px;
   .inner {
     .title-part {
       max-width: 450px;
@@ -154,6 +154,55 @@
   }
 }
 
+.about-section {
+  padding: 80px 0 144px;
+  .title-part {
+    max-width: 330px;
+    margin: 0 auto;
+  }
+  .inner-wrapper {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+  }
+
+  .left,
+  .right {
+    width: 50%;
+  }
+
+  .left {
+    .primary-btn {
+      justify-content: flex-start;
+    }
+  }
+  .right {
+    display: flex;
+    gap: 24px;
+
+    .image {
+      border-radius: 120px 0 120px 0;
+      display: flex;
+      overflow: hidden;
+      max-height: 378px;
+
+      img {
+        width: 100%;
+        display: block;
+      }
+
+      &:nth-child(2) {
+        border-radius: 0 120px 0 120px;
+      }
+
+      &:first-child {
+        transform: translateY(64px);
+      }
+    }
+  }
+}
+
 @media (max-width: 1199px) {
   .counters-section {
     .inner {
@@ -187,6 +236,21 @@
       }
     }
   }
+  .about-section {
+    padding: 80px 0;
+
+    .inner-wrapper {
+      gap: 42px;
+    }
+
+    .left {
+      width: 48%;
+    }
+
+    .right {
+      width: 52%;
+    }
+  }
 }
 
 @media (max-width: 991px) {
@@ -210,6 +274,38 @@
 
     .cards-wrapper {
       margin-top: 40px;
+    }
+  }
+  .about-section {
+    padding: 40px 0;
+
+    .inner-wrapper {
+      gap: 42px;
+      flex-direction: column-reverse;
+      margin-top: 40px;
+    }
+
+    .left {
+      width: 100%;
+
+      .primary-btn {
+        justify-content: center;
+      }
+
+      .content {
+        text-align: center;
+      }
+    }
+
+    .right {
+      width: 70%;
+      margin: 0 auto;
+
+      .image {
+        &:first-child {
+          transform: translate(0);
+        }
+      }
     }
   }
 }
@@ -246,7 +342,6 @@
     }
   }
   .products-section {
-
     .cards-wrapper {
       margin: 40px 0 0;
 
@@ -260,6 +355,21 @@
   }
 }
 
+@media (max-width: 575px) {
+  .about-section {
+    .right {
+      width: 100%;
+
+      .image {
+        border-radius: 60px 0 60px 0;
+
+        &:nth-child(2) {
+          border-radius: 0 60px 0 60px;
+        }
+      }
+    }
+  }
+}
 @media (max-width: 375px) {
   .counters-section {
     .inner {
