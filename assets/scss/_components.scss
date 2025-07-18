@@ -204,60 +204,129 @@
 }
 
 .testimonial-section {
-  padding: 80px 0;
+  padding-bottom: 80px;
+  .inner {
+    border-bottom: 1px solid $secondary-color;
+    padding: 80px 0;
+    .card-slider {
+      margin-top: 80px;
 
-  .card-slider {
-    margin-top: 80px;
+      .card {
+        padding: 24px 40px;
+        .card-top {
+          display: flex;
+          gap: 16px;
+          align-items: center;
+          .image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
 
-    .card {
-      padding: 24px 40px;
-      .card-top {
-        display: flex;
-        gap: 16px;
-        align-items: center;
-        .image {
-          width: 100px;
-          height: 100px;
-          border-radius: 50%;
-          overflow: hidden;
-          flex-shrink: 0;
-
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
           }
         }
-      }
 
-      .rating {
-        display: flex;
-        gap: 5px;
-        margin-top: 8px;
-      }
+        .rating {
+          display: flex;
+          gap: 5px;
+          margin-top: 8px;
+        }
 
-      .bottom-cotent {
-        margin-top: 16px;
+        .bottom-cotent {
+          margin-top: 16px;
+        }
       }
-    }
-    .splide__pagination {
-      position: static;
-      margin-top: 40px;
+      .splide__pagination {
+        position: static;
+        margin-top: 40px;
 
-      button.splide__pagination__page {
-        background: $tertiary-color;
-        width: 16px;
-        height: 16px;
-      }
+        button.splide__pagination__page {
+          background: $tertiary-color;
+          width: 16px;
+          height: 16px;
+        }
 
-      .splide__pagination__page.is-active {
-        transform: scale(1);
-        background-color: $primary-color;
+        .splide__pagination__page.is-active {
+          transform: scale(1);
+          background-color: $primary-color;
+        }
       }
     }
   }
 }
 
+.blog-section {
+  padding: 80px 0;
+  .cards-wrapper {
+    margin: 80px -16px 0;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 32px;
+
+    .card {
+      padding: 0 16px;
+      width: 33.33%;
+
+      .card-box {
+        padding: 16px;
+        border: 1px solid $secondary-color;
+        border-radius: 0 96px 0 40px;
+        .image {
+          border-radius: 0 80px 0 80px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            aspect-ratio: 1 / 0.8;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+
+      .card-content {
+        margin-top: 16px;
+      }
+
+      .user,
+      .date {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .content-top {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .content {
+        margin-top: 16px;
+        font-size: 24px;
+        line-height: normal;
+        font-weight: 600;
+      }
+
+      .content-bottom {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .link-text {
+        margin-top: 16px;
+      }
+    }
+  }
+  .primary-btn {
+    margin-top: 80px;
+  }
+}
 @media (max-width: 1199px) {
   .counters-section {
     .inner {
@@ -304,6 +373,14 @@
 
     .right {
       width: 52%;
+    }
+  }
+  .blog-section {
+    padding: 40px 0;
+    .cards-wrapper {
+      .card {
+        width: 50%;
+      }
     }
   }
 }
@@ -364,10 +441,21 @@
     }
   }
   .testimonial-section {
+    padding-bottom: 40px;
+    .inner {
+      padding: 40px 0;
+      .card-slider {
+        margin-top: 40px;
+      }
+    }
+  }
+  .blog-section {
     padding: 40px 0;
-
-    .card-slider {
-      margin-top: 40px;
+    .cards-wrapper {
+      margin: 40px -16px 0;
+    }
+    .primary-btn{
+          margin-top: 40px;
     }
   }
 }
@@ -416,9 +504,23 @@
     }
   }
   .testimonial-section {
-    .card-slider {
+    .inner {
+      .card-slider {
+        .card {
+          padding: 24px 12px;
+        }
+        .splide__pagination {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+  .blog-section {
+    .cards-wrapper {
       .card {
-        padding: 24px;
+        max-width: 320px;
+        width: 100%;
+        margin: 0 auto;
       }
     }
   }
