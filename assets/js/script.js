@@ -1,3 +1,6 @@
+AOS.init({
+  
+})
 $(function () {
   $("header.header .inner .right .menu-bar a").on("click", function () {
     $("header.header .inner .center").slideToggle(200);
